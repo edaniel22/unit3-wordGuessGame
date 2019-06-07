@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <style>
+         #contentColumn {
+            padding:50px
+        }
+    </style>
+</head>
+
+<body background="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6208f106-928e-47bb-80b1-ce55b9e82b98/d1cy0mr-c37d5e13-024c-4db7-b387-dfba508e07cf.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzYyMDhmMTA2LTkyOGUtNDdiYi04MGIxLWNlNTViOWU4MmI5OFwvZDFjeTBtci1jMzdkNWUxMy0wMjRjLTRkYjctYjM4Ny1kZmJhNTA4ZTA3Y2YuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jijL4Fe6F4dWFheidwEBAVxe6y4_dGsFofmCWQFae14">
+    
+    <br>
+    <br>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class = "col">
+
+                <div class="jumbotron text-center"  style="background-color:whitesmoke">
+
+                    <h1 class="display-1 text-dark"><i class='fas fa-chess text-dark display-1'></i>   Chessguess 
+                        <i class='fas fa-chess text-dark display-1'></i></h1>      
+                    <br>
+                    <h5 id="directions-text" class="display-5 text-dark">Press any key to start!</h3>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+        
+    <div class="container text-dark">
+
+        <div class="row">
+
+            <div class="col rounded" id="contentColumn" style="background-color:whitesmoke">  
+
+                <div class="row" padding-top="50px">
+
+                    <div class="col" style="width:47%">
+
+                        <div class="container">
+
+                            <div class="card">
+
+                                <div class="card-body">
+
+                                    <p id="current-word">Current Word</p>
+                                    <p id="hits-display"></p>
+
+                                </div>
+                            
+                            </div>
+                        
+                        </div>
+                                
+                    </div>
+
+                    <div class="col"  style="width:47%">
+
+                            <div class="container">
+
+                                <div class="card">
+
+                                    <div class="card-body">
+                                        
+                                        <p id="wins-text">Wins</p>
+                                        <p id=wins-display></p>
+                                        
+                                        <!-- icon display -->
+                                        <i style="font-size:24px" class="fas" 
+                                        id="icon-display"></i>
+                                        
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+
+                    </div>
+
+                </div>
+
+                <br> 
+
+                <div class="row">
+
+                    <div class="col" style="width:47%">
+
+                        <div class="container">
+
+                            <div class="card">
+
+                                <div class="card-body">
+
+                                    <p id="guesses-left-text">Number of Guesses Left</p>
+                                    <p id="guesses-display"></p>
+
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+
+                    <div class="col"  style="width:47%">
+
+                        <div class="container">
+
+                            <div class="card">
+    
+                                <div class="card-body">
+
+                                    <p id="letters-guessed-text">Letters Already Guessed</p>
+                                    <p id="misses-display"></p>
+                                
+                                </div>
+                            
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+    
+    </div>
+
+    <script type=text/javascript src="assets/javascript/game.js">
+    </script>
+</body>
+</html>
