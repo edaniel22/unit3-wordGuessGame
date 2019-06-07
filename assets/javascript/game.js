@@ -1,5 +1,4 @@
-//create variables that hold references in the HTML file where
-//we want to display things
+//create variables that hold references to the HTML file
 var directionsText = document.getElementById("directions-text");
 var winsText = document.getElementById ("wins-text");
 var winsDisplayText = document.getElementById("wins-display");
@@ -9,8 +8,7 @@ var guessesDisplayText = document.getElementById("guesses-display");
 var missesDisplayText = document.getElementById("misses-display");
 var iconDisplayText = document.getElementById ("icon-display");
 
-// initializes variables that display wins and
-//number of lives left
+//initializes NUMBERS that show how many wins and number of guesses left
 var winsNumber = 0;
 var guessesLeftNumber = 10;
 
@@ -18,18 +16,15 @@ var chessArray = ["KING", "QUEEN", "KNIGHT", "BISHOP", "PAWN", "ROOK", "CASTLE",
 console.log(chessArray);
 console.log(chessArray.length);
 
-//randIndexNumber is a NUMBER
-//gives a random number between 0 and the length of the veg array
+//randIndexNumber is a NUMBER that gives a random number between 0 and the length of chessArray
 var randIndexNumber = Math.floor (Math.random()* chessArray.length);
 console.log(randIndexNumber);
 
-//choiceString is a STRING 
-//choiceString is a string chosen from chessArray array
+//choiceString is a STRING chosen from chessArray array
 var choiceString = chessArray [randIndexNumber];
 console.log(choiceString);
 
-//underscoreArray is an ARRAY
-//initializes a number that is the value of the length word that needs to be guessed
+//underscoreArray is an ARRAY that will 
 var underscoreArray = [];
 console.log(underscoreArray);
 
@@ -55,11 +50,11 @@ var setup = function () {
         outputString = outputString + underscoreArray [i];
         console.log(outputString);
     }
-    //underscoreArray the string outputString, which now holds the blank values
+    //displays outputString, which now displays the word to be guessed as underscores
     hitsDisplayText.textContent = outputString;
     console.log(outputString);
 
-    //resets outputString back to a blank which is a STRING
+    //resets outputString back to an empty STRING
     outputString = "";
     console.log(outputString);
 }
@@ -69,10 +64,9 @@ winsDisplayText.textContent = winsNumber;
 guessesDisplayText.textContent = guessesLeftNumber;
 missesDisplayText.textContent = missedGuessArray;
 
-
 setup ();
 
-//resets the game and selects another random word after user wins or loses
+//resets the game and selects another word after user wins or loses
 var restart = function (){
 
     var chessArray = ["KING", "QUEEN", "KNIGHT", "BISHOP", "PAWN", "ROOK", "CASTLE", "CHECKMATE", "BOARD"];
@@ -97,10 +91,12 @@ var restart = function (){
     setup ();
 }
 
-// //This function is run whenever the user presses a key
+//This function is run whenever the user presses a key
 document.onkeyup = function(event) {
     
+    //displays the word "Wins" on the screen
     winsText.textContent = "Wins";
+
     //Hides the directions
     directionsText.textContent = "";
 
@@ -108,11 +104,12 @@ document.onkeyup = function(event) {
     var userGuess = event.key;
     console.log (userGuess);
 
-    //changes all guess to upperCase, consistent with all possible words
+    //c\Changes all pressed keys to upperCase, consistent with all possible words
     var guessUpperCase = userGuess.toUpperCase();
     console.log (guessUpperCase);
     console.log (typeof(guessUpperCase));
 
+ 
     var alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     console.log (choiceString);
     console.log (outputString);
