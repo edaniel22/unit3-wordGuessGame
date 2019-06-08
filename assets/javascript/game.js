@@ -24,7 +24,7 @@ console.log(randIndexNumber);
 var choiceString = chessArray [randIndexNumber];
 console.log(choiceString);
 
-//underscoreArray is an ARRAY that will 
+//underscoreArray is an ARRAY that will hold each of the letters of the word to be guessed as underscores
 var underscoreArray = [];
 console.log(underscoreArray);
 
