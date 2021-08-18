@@ -42,7 +42,7 @@ console.log(characterArray);
 var setup = function () {
     for (var i=0; i<choiceString.length; i++)
     {
-        //sets underscoreArray array to "_ ", and will iterate choiceString.length number of times
+        //sets underscoreArray array to "_ ", and will iterate choiceString.length-1 number of times
         underscoreArray[i] = "_ ";
         console.log(underscoreArray);
 
@@ -149,7 +149,7 @@ document.onkeyup = function(event) {
     if (outputString == choiceString) {
         winsNumber++;
         winsDisplayText.textContent = winsNumber;
-        winsText.textContent = "YOU WIN!!!"; 
+        winsText.textContent = "YOU WIN!!! The word was " + choiceString; 
         if (choiceString == "KING") {
             iconDisplayText.innerHTML = "&#xf43f;";
         }
